@@ -109,7 +109,7 @@ function Diagnostic({ onRequireAuth }) {
     const endpoint = isLoginMode ? '/api/auth/login' : '/api/auth/register';
     
     try {
-      const response = await fetch(`http://localhost:5000${endpoint}`, {
+      const response = await fetch(`https://crop-ai-rmsb.onrender.com${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(authData),
@@ -157,7 +157,7 @@ function Diagnostic({ onRequireAuth }) {
       // 1. THIS IS THE LINE THAT WAS MISSING - Grab the token!
       const token = localStorage.getItem('token'); 
 
-      const response = await fetch('http://localhost:5000/api/diagnose', {
+      const response = await fetch('https://crop-ai-rmsb.onrender.com', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}` // 2. Send the token
