@@ -126,8 +126,3 @@ app.listen(PORT, async () => {
     console.log(`\n🚀 Crop.AI API running securely on http://localhost:${PORT}`);
     await initModel();
 });
-
-app.listen(PORT, async () => {
-    console.log(`\n🚀 Crop.AI API running securely on http://localhost:${PORT}`);
-    await initModel();
-});
