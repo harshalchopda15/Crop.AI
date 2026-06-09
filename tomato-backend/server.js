@@ -19,9 +19,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    // Add your Vercel URL exactly as it appears (no trailing slash)
-    origin: ['http://localhost:5173', 'https://crop-ai-green.vercel.app'] 
+    origin: [
+        'http://localhost:5173', 
+        'https://crop-8f1oe3xk4-harshalchopda15s-projects.vercel.app' // <-- The exact Vercel URL (NO slash at the end)
+    ],
+    credentials: true // Keep this if you are using it!
 }));
+
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/analytics', analyticsRoutes);
