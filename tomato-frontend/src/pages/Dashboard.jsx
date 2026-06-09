@@ -42,7 +42,7 @@ function Dashboard({ onRequireAuth }) {
       if (!token) return; 
 
       try {
-        const response = await fetch('https://crop-ai-rmsb.onrender.com', {
+        const response = await fetch('https://crop-ai-rmsb.onrender.com/api/analytics', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         
