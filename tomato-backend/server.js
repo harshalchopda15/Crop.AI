@@ -18,7 +18,10 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+    // Add your Vercel URL exactly as it appears (no trailing slash)
+    origin: ['http://localhost:5173', 'https://crop-ai-green.vercel.app'] 
+}));
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/analytics', analyticsRoutes);
