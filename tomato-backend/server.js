@@ -21,9 +21,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
     origin: [
         'http://localhost:5173', 
-        'https://crop-8f1oe3xk4-harshalchopda15s-projects.vercel.app' // <-- The exact Vercel URL (NO slash at the end)
+        'https://crop-frontend-three.vercel.app' // <-- Added your actual production domain
     ],
-    credentials: true // Keep this if you are using it!
+    credentials: true
 }));
 
 app.use(express.json());
